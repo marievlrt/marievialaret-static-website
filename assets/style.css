@@ -1,0 +1,167 @@
+/* Reset some default styles */
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    margin: 0;
+    padding: 10px;
+    background-color: #fff7eb;
+}
+
+.centered-text {
+    text-align: center; /* Centre le texte horizontalement */
+}
+
+.button {
+    display: inline-block;
+    font-size: 16px;
+    background-color: #7edd83;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+  }
+
+.button:hover {
+    background-color: #000000;
+    color: #fff7eb;
+}
+
+/* Container for all columns */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    height: 100vh;
+}
+
+/* First column: Navigation */
+.nav-column {
+    width: 20%; /* Narrow column */
+    /* background-color: #f4f4f4; */
+    padding: 10px;
+    border-right: 1px solid #000000;
+    height: 100%;
+}
+
+.nav-column h1 {
+    font-family: "Pathway Gothic One", serif;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.nav-column h1 a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.nav-column h1 a:hover {
+    text-decoration: underline; /* Souligner le lien au survol */
+}
+
+.nav-column nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-column nav ul li {
+    margin-bottom: 10px;
+}
+
+.nav-column nav ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.nav-column nav ul li a:hover {
+    text-decoration: underline; /* Souligner le lien au survol */
+}
+
+/* Second column: Content (Widest) */
+.content-column {
+    width: 55%; /* Wider column */
+    padding: 20px;
+    /* background-color: #fff; */
+    height: 100%;
+}
+
+.content-column h2 {
+    font-family: "Pathway Gothic One", serif;
+    font-size: 25px;
+}
+
+.content-column a {
+    color:#000000;
+}
+
+/* Third column: About Me */
+.info-column {
+    width: 20%; /* Narrow column */
+    /* background-color: #f4f4f4; */
+    padding: 20px;
+    border-left: 1px solid #000000;
+    height: 100%;
+}
+
+.info-column h3 {
+    font-size: 20px;
+}
+
+.info-column img {
+    width: 100%;
+    height: auto;
+}
+
+form {
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto; /* Center the form on the page */
+    padding: 20px;
+    border-radius: 10px;
+    /* background-color: #f9f9f9; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 96.5%;
+    padding: 10px;
+    margin-bottom: 20px; /* Space between elements */
+    margin-top: 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Specific styling for textarea */
+textarea {
+    height: 150px; /* Increase height for better text entry */
+    resize: vertical; /* Allow users to resize vertically */
+}
+
+button[type="submit"] {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    background-color: #7edd83;
+    /* color: white; */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #000000;
+    color: #fff7eb;
+}
+
+footer {
+    text-align: center;
+}

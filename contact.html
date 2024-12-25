@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <!-- Fonts: -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Calistoga&family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pathway+Gothic+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rufina:wght@400;700&family=Titan+One&display=swap" rel="stylesheet">
+    <!-- Fontawwsome: -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- CSS: -->
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- First Column: Navigation -->
+        <div class="nav-column">
+            <h1><a href="index.html"><b>Marie Vialaret</b></a></h1>
+            <nav>
+                <ul>
+                    <li><a href="ig-tpa.html">Instagram - T'as pensé à... ?</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Second Column: Main Content (Widest) -->
+        <div class="content-column">
+            <h2>Contact</h2>
+            <p class="centered-text">Contactez-moi en remplissant le formulaire ci-dessous :</p><br>
+            
+            <form action="https://script.google.com/macros/s/AKfycbyWbhuh4ANHx65OJ4ifmwyhv9T9AgtfA0Ev5pdjBAJwCRis0DCGzF9t4G2ptCCk3DuHyA/exec" method="POST">
+                <!-- Name Input -->
+                <label for="nom">Nom* :</label>
+                <input type="text" id="nom" name="nom" required><br>
+                <!-- Email -->
+                <label for="email">E-mail* :</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <!-- Message -->
+                <label for="message">Votre message :</label><br>
+                <textarea id="message" name="message"></textarea><br>
+                <!-- Submit Button -->
+                <button type="submit">Envoyer</button>
+            </form>
+
+        </div>
+
+        <!-- Third Column: About Me and Picture -->
+        <div class="info-column">
+            <!-- <h3>About Me</h3> -->
+            <p>Je m'appelle Marie Vialaret. Je suis statisticienne et conférencière spécialisée dans les questions d'inégalites de genre. Je suis basée principalement en France.</p>
+            <p>Diplômée de la Toulouse School of Economics, j'ai ensuite étudié les statistiques appliquées à l'ENSAE ParisTech.</p>
+            <img src="img/marie.jpg" alt="Marie Vialaret" width="100%">
+        </div>
+    </div>
+</body>
+</html>
