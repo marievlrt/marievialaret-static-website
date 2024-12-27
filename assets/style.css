@@ -46,7 +46,11 @@ body {
     width: 20%; /* Narrow column */
     /* background-color: #f4f4f4; */
     padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
     /* height: 100%; */
+    overflow-y: auto;
 }
 
 .nav-column h1 {
@@ -84,8 +88,11 @@ body {
 
 /* Second column: Content (Widest) */
 .content-column {
+    margin-left: 20%; /* Décale la colonne centrale à droite de la colonne fixe */
+    margin-right: 20%;
     width: 55%; /* Wider column */
     padding: 20px;
+    overflow: auto;
     /* background-color: #fff; */
     border-right: 1px solid #000000;
     border-left: 1px solid #000000;
@@ -104,9 +111,13 @@ body {
 /* Third column: About Me */
 .info-column {
     width: 20%; /* Narrow column */
+    position: fixed;
+    top: 0;
+    right: 0;
     /* background-color: #f4f4f4; */
-    padding: 20px;
+    padding: 10px;
     /* height: 100%; */
+    overflow-y: auto;
 }
 
 .info-column h3 {
