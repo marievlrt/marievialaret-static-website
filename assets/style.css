@@ -15,6 +15,42 @@ body {
     /* overflow: hidden; */
 }
 
+.menu-burger {
+    display: none; /* Cacher sur les écrans larges */
+}
+
+@media (max-width: 768px) {
+    .menu-burger {
+        display: block; /* Afficher sur les écrans petits */
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 1000;
+    }
+    .nav-column {
+        display: none; /* Cacher par défaut */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 70%; /* Largeur du menu dépliant */
+        height: 100%;
+        /* background-color: #f8f9fa; */
+        /* box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); */
+        z-index: 999;
+    }
+    .nav-column.active {
+        display: block; /* Montrer quand on clique sur le bouton */
+    }
+    .content-column, .info-column {
+        width: 100%; /* Les éléments prennent toute la largeur */
+        float: none; /* Annule les effets de flottement */
+    }
+    .info-column {
+        margin-top: 20px; /* Ajoute un espace entre les sections */
+    }
+}
+
+
 .centered-text {
     text-align: center; /* Centre le texte horizontalement */
 }
