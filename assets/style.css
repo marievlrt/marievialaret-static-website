@@ -192,6 +192,24 @@ button:hover {
     color: #fff5ef;
 }
 
-footer {
+.icon {
+    color: #fcba93;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 0;
+    /* transition: color 0.3s ease; */
+}
+
+.icon:hover {
+    color: #000000;
+}
+
+footer{
     text-align: center;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+footer p{
+    margin: 0;
 }
