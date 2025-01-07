@@ -19,57 +19,6 @@ body {
     display: none; /* Cacher sur les écrans larges */
 }
 
-@media (max-width: 768px) {
-    .menu-burger {
-        display: block; /* Afficher sur les écrans petits */
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        z-index: 1000;
-    }
-    .nav-column {
-        display: none; /* Cacher par défaut */
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 70%; /* Largeur du menu dépliant */
-        height: 100%;
-        /* background-color: #f8f9fa; */
-        /* box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); */
-        z-index: 999;
-    }
-    .nav-column.active {
-        display: block; /* Montrer quand on clique sur le bouton */
-    }
-    .content-column, .info-column {
-        width: 100%; /* Les éléments prennent toute la largeur */
-        float: none; /* Annule les effets de flottement */
-    }
-    .info-column {
-        margin-top: 20px; /* Ajoute un espace entre les sections */
-    }
-}
-
-
-.centered-text {
-    text-align: center; /* Centre le texte horizontalement */
-}
-
-.button {
-    display: inline-block;
-    font-size: 16px;
-    background-color: #fcba93;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    text-align: center;
-  }
-
-.button:hover {
-    background-color: #000000;
-    color: #fff5ef;
-}
-
 /* Container for all columns */
 .container {
     display: flex;
@@ -79,6 +28,7 @@ body {
     /* height: 100%; */
     overflow: scroll;
     scrollbar-width: none;
+    flex-wrap: wrap;
 }
 
 .container::-webkit-scrollbar {
@@ -173,6 +123,87 @@ body {
 .info-column img {
     width: 100%;
     height: auto;
+}
+
+@media (max-width: 968px) {
+    .menu-burger {
+        display: block; /* Afficher sur les écrans petits */
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 1000;
+    }
+    .container {
+        display: flex;
+        flex-direction: column; /* Empile les éléments */
+        overflow: hidden;
+    }
+    .nav-column {
+        display: none; /* Cacher par défaut */
+        position: fixed;
+        top: 50px;
+        left: 20px;
+        width: 100%; /* Largeur du menu dépliant */
+        height: 100%;
+        background-color: #fff5ef;
+        /* box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); */
+        z-index: 999;
+    }
+    .nav-column.active {
+        display: block; /* Montrer quand on clique sur le bouton */
+    }
+    .content-column {
+        order: 1;
+        position: static;
+        margin: 0;
+        /* top: 0; */
+        /* left: 0; */
+        width: 100%;
+        padding: 40px;
+        float: none;
+    }
+    .info-column {
+        order: 2;
+        position: static;
+        width: 100%;
+        padding: 40px;
+        float: none;
+        border-left: none;
+    }
+    /* .content-column, .info-column { */
+        /* width: 100%; Les éléments prennent toute la largeur */
+        /* float: none; Annule les effets de flottement */
+    /* } */
+}
+
+
+.centered-text {
+    text-align: center; /* Centre le texte horizontalement */
+}
+
+.button {
+    display: inline-block;
+    font-size: 16px;
+    background-color: #fcba93;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+  }
+
+.menu-burger-btn {
+    background-color: #fff5ef; /* Couleur de fond */
+    /* color: white; Couleur du texte */
+    border: none; /* Supprime les bordures */
+    /* border-radius: 5px; Arrondit les coins */
+    padding: 10px 15px; /* Espace interne */
+    font-size: 30px; /* Taille du texte */
+    cursor: pointer; /* Curseur "main" au survol */
+}
+
+.button:hover {
+    background-color: #000000;
+    color: #fff5ef;
 }
 
 form {

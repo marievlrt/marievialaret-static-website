@@ -26,6 +26,10 @@
 </head>
 <body>
     <div class="container">
+        <!-- Menu burger pour les ecrans etroits -->
+        <div class="menu-burger">
+            <button class="menu-burger-btn" onclick="toggleMenu()">☰</button>
+        </div>
         <!-- First Column: Navigation -->
         <div class="nav-column">
             <h1><a href="index.html"><b>Marie Vialaret</b></a></h1>
@@ -37,6 +41,13 @@
                 </ul>
             </nav>
         </div>
+
+        <script>
+            function toggleMenu() {
+                const menu = document.querySelector('.nav-column');
+                menu.classList.toggle('active');
+            }
+        </script>
 
         <!-- Second Column: Main Content (Widest) -->
         <div class="content-column">
