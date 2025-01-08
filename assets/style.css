@@ -158,14 +158,14 @@ body {
         margin: 0;
         /* top: 0; */
         /* left: 0; */
-        width: 90%;
+        width: 80%;
         padding: 40px;
         float: none;
     }
     .info-column {
         order: 2;
         position: static;
-        width: 90%;
+        width: 80%;
         padding: 40px;
         float: none;
         border-left: none;
