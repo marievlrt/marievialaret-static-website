@@ -113,6 +113,11 @@ a{
     text-decoration: none;
 }
 
+h2.color-link {
+    color: white;
+    background-color: rgb(50, 1, 56); 
+  }
+
 a:hover{
     color: #fcba93;
 }
