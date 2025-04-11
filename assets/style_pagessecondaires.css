@@ -1,8 +1,9 @@
 body{
     margin: 0;
     /* background: linear-gradient(#95145b,#ed8dcd); */
-    background-color: #fff5ef;
-    font-family: "Vollkorn", serif;
+    /* background-color: #fff5ef; */
+    background-color: #f5f5f5;
+    font-family: "Merriweather", serif;
     font-size: 15px;
     /* line-height: 40px; */
 }
@@ -16,8 +17,8 @@ header{
 }
 
 header h1{
-    color: #fcba93;
-    font-family: "Pathway Gothic One", serif;
+    color: #008080;
+    font-family: "Montserrat", serif;
     text-decoration: underline;
     /* font-family: "Anton", sans-serif; */
     font-size: 90px;
@@ -29,7 +30,7 @@ header h1{
 header img{
     border-radius: 170px;
     width: 300px;
-    border: 10px solid white;
+    /* border: 10px solid white; */
 }
 
 /* Icon block styling: */
@@ -39,7 +40,7 @@ header img{
 } */
 
 .icon {
-    color: #fcba93;
+    color: #008080;
     font-size: 60px;
     text-decoration: none;
     padding: 0;
@@ -119,7 +120,7 @@ h2.color-link {
   }
 
 a:hover{
-    color: #fcba93;
+    color: #008080;
 }
 
 /* Footer styling: */
