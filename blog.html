@@ -14,7 +14,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>T'as pensé à... ?</title>
+    <title>Marie Vialaret</title>
     <!-- Fonts: -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,13 +54,32 @@
 
         <!-- Second Column: Main Content (Widest) -->
         <div class="content-column">
-            <h2>Association <i>T'as pensé à... ?</i></h2>
-            <p>Je suis fière d'être présidente de l'association <i><b>T'as pensé à ?</b></i> (<b><i>tpà</i></b> pour les intimes) qui se donne pour mission de <b>faire la lumière sur la charge mentale</b> sous toutes ses facettes, et de <b>faire entendre la voix</b> des personnes concernées en publiant leurs témoignages.</p>
-            <p>Cliquez sur ce bouton pour découvrir leurs histoires &#8595;</p>
-            <p class="centered-text">
-                <a class="button" href="https://www.instagram.com/taspensea/" target="_blank">@taspensea</a>
-            </p>
+            <h2>Blog</h2>
+            <p>Cliquez sur le titre d'un article pour lire la suite &#8595;</p>
+            <div id="articles-list"></div>
         </div>
+
+        <script>
+            const articles = [
+              {
+                url: "articles/travailler-plus-pour-gagner-moins.html",
+                title: "Travailler plus pour gagner moins",
+                excerpt: "Vous êtes une femme ? Vous travaillez chaque jours 6 minutes de plus que votre conjoint, et gagnez 6000 € de moins par an."
+              }
+            ];
+        
+            const container = document.getElementById('articles-list');
+        
+            articles.forEach(article => {
+              const div = document.createElement('div');
+              div.className = 'article-preview';
+              div.innerHTML = `
+                <h1 class="article-title"><a href="${article.url}">${article.title}</a></h1>
+                <p class="article-excerpt">${article.excerpt}</p>
+              `;
+              container.appendChild(div);
+            });
+          </script>
 
         <!-- Third Column: About Me and Picture -->
         <div class="info-column">

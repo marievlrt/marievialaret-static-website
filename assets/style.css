@@ -186,6 +186,11 @@ body {
 .centered-text {
     text-align: center; /* Centre le texte horizontalement */
 }
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 .note {
     text-align: center; /* Centre le texte horizontalement */
@@ -302,3 +307,36 @@ footer{
 footer p{
     margin: 0;
 }
+
+.article-preview {
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Titre de l’article */
+  .article-title {
+    font-family: "Merriweather", serif;
+    font-size: 1.6rem;
+    /* color: #222; */
+    margin-bottom: 0.4em;
+  }
+  
+  .article-title a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .article-title a:hover {
+    color: #008080; /* Ou ta couleur d’accent */
+    text-decoration: underline;
+  }
+  
+  /* Aperçu / extrait */
+  .article-excerpt {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #555;
+    line-height: 1.6;
+  }
