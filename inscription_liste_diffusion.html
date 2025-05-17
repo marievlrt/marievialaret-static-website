@@ -11,6 +11,7 @@
 
   gtag('config', 'G-9YZ5XDRMTQ');
 </script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <meta charset="UTF-8" />
     <title>Marie Vialaret | Inscription</title>
@@ -24,18 +25,6 @@
     <!-- CSS: -->
     <link rel="stylesheet" href="assets/style.css">
 </head>
-<script>
-    const prenomInput = document.getElementById('prenom');
-
-    // Expression régulière pour détecter : emojis, cyrillique, liens, caractères spéciaux indésirables
-    const invalidRegex = /([\u2700-\u27BF]|[\uE000-\uF8FF]|\u24C2|[\u0400-\u04FF]|http|www\.|[@#*<>[\]{}$%^&+=])/gi;
-
-    prenomInput.addEventListener('input', function () {
-        if (invalidRegex.test(this.value) || this.value.length > 50) {
-            this.value = this.value.replace(invalidRegex, '').slice(0, 50);
-        }
-    });
-</script>
 <body>
     <div class="container">
         <!-- Menu burger pour les ecrans etroits -->
@@ -74,7 +63,7 @@
             </ul> 
             <p><br></p>
 
-            <form action="https://script.google.com/macros/s/AKfycbzC6Exon-hiWE5nqlaj22OLSpDyxJKTI8CfRmZGl0No0KpYbEVqYxEo4tqG67lfjDM/exec" method="POST">
+            <form id="form-inscription" action="https://script.google.com/macros/s/AKfycbzC6Exon-hiWE5nqlaj22OLSpDyxJKTI8CfRmZGl0No0KpYbEVqYxEo4tqG67lfjDM/exec" method="POST">
 
                 <!-- <label for="prenom">Prénom:</label> -->
                 <input type="text" id="prenom" name="prenom" placeholder="Mon prénom" required><br><br>
@@ -89,8 +78,14 @@
                     En cochant cette case, j'accepte les conditions générales d'utilisation de mon email.
                 </label><br><br> -->
                 
-                <button type="submit">Je m'abonne</button>
-                <p class="note">En cliquant sur le bouton, vous acceptez de recevoir des emails de <i>Marie Vialaret</i>, présidente de <i>tpà</i>. Vous pouvez vous désinscrire à tout moment.</p>
+                <!-- <button type="submit">Je m'abonne</button> -->
+                 <button class="g-recaptcha"
+                    data-sitekey="6Lf_rj0rAAAAAAtJIljWE02Ng2muUdqA2k7H2-eP"
+                    data-callback="onSubmit"
+                    data-action="submit">
+                        Je m'abonne
+                </button>
+                <p class="note">En cliquant sur le bouton, vous acceptez de recevoir des emails de <i>Marie Vialaret</i>. Vous pouvez vous désinscrire à tout moment.</p>
             </form>
 
         </div>
@@ -126,5 +121,22 @@
             </div>
             &copy; <i>Marie Vialaret</i> 2025</p>
     </footer>
+<script>
+    const prenomInput = document.getElementById('prenom');
+
+    // Expression régulière pour détecter : emojis, cyrillique, liens, caractères spéciaux indésirables
+    const invalidRegex = /([\u2700-\u27BF]|[\uE000-\uF8FF]|\u24C2|[\u0400-\u04FF]|http|www\.|[@#*<>[\]{}$%^&+=])/gi;
+
+    prenomInput.addEventListener('input', function () {
+        if (invalidRegex.test(this.value) || this.value.length > 50) {
+            this.value = this.value.replace(invalidRegex, '').slice(0, 50);
+        }
+    });
+</script>
+<script>
+    function onSubmit(token) {
+        document.getElementById("form-inscription").submit();
+    }
+</script>
 </body>
 </html>
